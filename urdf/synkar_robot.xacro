@@ -137,4 +137,80 @@
   <axis xyz="-1.0 0.0 0.0"/>
 </joint>
 
+
+  <!-- ========== T265 (mono) ========== -->
+  <link name="camera_t265_link"/>
+  <joint name="camera_t265_joint" type="fixed">
+    <parent link="base_link"/>
+    <child  link="camera_t265_link"/>
+    <!-- x=0.290, y=0.2425, z=ajuste -->
+    <origin xyz="0.290 0.2425 0.20" rpy="0 0 0"/>
+  </joint>
+
+  <gazebo reference="camera_t265_link">
+    <sensor name="t265_cam" type="camera">
+      <camera name="mono">
+        <horizontal_fov>1.047</horizontal_fov>
+        <image>
+          <width>480</width><height>480</height><format>R8G8B8</format>
+        </image>
+        <clip><near>0.05</near><far>20.0</far></clip>
+      </camera>
+      <plugin name="gazebo_ros_camera" filename="libgazebo_ros_camera.so">
+        <frameName>camera_t265_link</frameName>
+        <imageTopicName>/camera/t265/image_raw</imageTopicName>
+        <cameraInfoTopicName>/camera/t265/camera_info</cameraInfoTopicName>
+        <updateRate>30.0</updateRate>
+      </plugin>
+    </sensor>
+  </gazebo>
+
+  <!-- ========== D435i (RGB + Depth) ========== -->
+  <link name="camera_d435i_link"/>
+  <joint name="camera_d435i_joint" type="fixed">
+    <parent link="base_link"/>
+    <child  link="camera_d435i_link"/>
+    <!-- x=0.290, y=0.2725, z=ajuste -->
+    <origin xyz="0.290 0.2725 0.20" rpy="0 0 0"/>
+  </joint>
+
+  <!-- RGB -->
+  <gazebo reference="camera_d435i_link">
+    <sensor name="d435i_rgb" type="camera">
+      <camera name="rgb">
+        <horizontal_fov>1.047</horizontal_fov>
+        <image>
+          <width>640</width><height>480</height><format>R8G8B8</format>
+        </image>
+        <clip><near>0.1</near><far>10.0</far></clip>
+      </camera>
+      <plugin name="gazebo_ros_camera" filename="libgazebo_ros_camera.so">
+        <frameName>camera_d435i_link</frameName>
+        <imageTopicName>/camera/d435i/image_raw</imageTopicName>
+        <cameraInfoTopicName>/camera/d435i/camera_info</cameraInfoTopicName>
+        <updateRate>30.0</updateRate>
+      </plugin>
+    </sensor>
+  </gazebo>
+
+  <!-- Depth + PointCloud -->
+  <gazebo reference="camera_d435i_link">
+    <sensor name="d435i_depth" type="depth">
+      <camera name="depth">
+        <horizontal_fov>1.047</horizontal_fov>
+        <image>
+          <width>640</width><height>480</height><format>R8G8B8</format>
+        </image>
+        <clip><near>0.1</near><far>10.0</far></clip>
+      </camera>
+      <plugin name="gazebo_ros_depth_camera" filename="libgazebo_ros_depth_camera.so">
+        <frameName>camera_d435i_link</frameName>
+        <depthImageTopicName>/camera/d435i/image_raw</depthImageTopicName>
+        <cameraInfoTopicName>/camera/d435i/camera_info</cameraInfoTopicName>
+        <pointCloudTopicName>/camera/d435i/points</pointCloudTopicName>
+        <updateRate>30.0</updateRate>
+      </plugin>
+    </sensor>
+  </gazebo>
+
 </robot>
