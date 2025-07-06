@@ -1,0 +1,28 @@
+<?xml version="1.0" ?>
+<robot name="synkar_robot" xmlns:xacro="http://www.ros.org/wiki/xacro">
+
+  <!-- Transmissão para roda motorizada 2 -->
+  <transmission name="Revolucionar_2_tran">
+    <type>transmission_interface/SimpleTransmission</type>
+    <joint name="Revolucionar_2">
+      <hardwareInterface>hardware_interface/EffortJointInterface</hardwareInterface>
+    </joint>
+    <actuator name="Revolucionar_2_actr">
+      <hardwareInterface>hardware_interface/EffortJointInterface</hardwareInterface>
+      <mechanicalReduction>1</mechanicalReduction>
+    </actuator>
+  </transmission>
+
+  <!-- Transmissão para roda motorizada 3 -->
+  <transmission name="Revolucionar_3_tran">
+    <type>transmission_interface/SimpleTransmission</type>
+    <joint name="Revolucionar_3">
+      <hardwareInterface>hardware_interface/EffortJointInterface</hardwareInterface>
+    </joint>
+    <actuator name="Revolucionar_3_actr">
+      <hardwareInterface>hardware_interface/EffortJointInterface</hardwareInterface>
+      <mechanicalReduction>1</mechanicalReduction>
+    </actuator>
+  </transmission>
+
+</robot>

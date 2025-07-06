@@ -1,0 +1,8 @@
+<launch>
+  <param name="robot_description" command="$(find xacro)/xacro $(find synkar_robot_description)/urdf/synkar_robot.xacro"/>
+  <include file="$(find gazebo_ros)/launch/empty_world.launch">
+    <arg name="use_sim_time" value="true"/>
+  </include>
+  <node pkg="gazebo_ros" type="spawn_model" name="spawn_robot"
+        args="-param robot_description -urdf -model synkar_robot"/>
+</launch>
