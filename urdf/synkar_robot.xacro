@@ -6,9 +6,9 @@
 <xacro:include filename="$(find synkar_robot_description)/urdf/synkar_robot.gazebo" />
 <link name="base_link">
   <inertial>
-    <origin xyz="9.276950407566456e-16 7.823390100972366e-06 0.18360480308889404" rpy="0 0 0"/>
+    <origin xyz="-1.752782325215843e-05 2.5351213352424762e-05 0.18360480308889404" rpy="0 0 0"/>
     <mass value="591.0521687791345"/>
-    <inertia ixx="22.256446" iyy="15.442645" izz="27.027958" ixy="0.0" iyz="0.000618" ixz="0.0"/>
+    <inertia ixx="15.442645" iyy="22.256446" izz="27.027958" ixy="-0.0" iyz="-0.0" ixz="0.000618"/>
   </inertial>
   <visual>
     <origin xyz="0 0 0" rpy="0 0 0"/>
@@ -21,130 +21,128 @@
     <origin xyz="0 0 0" rpy="0 0 0"/>
     <geometry>
       <mesh filename="package://synkar_robot_description/meshes/base_link.stl" scale="0.001 0.001 0.001"/>
-    </geometry>
-  </collision>
-</link>
-
-<link name="roda_v1_1">
-  <inertial>
-    <origin xyz="0.0224999999999983 5.551115123125783e-17 0.0" rpy="0 0 0"/>
-    <mass value="7.553355760718545"/>
-    <inertia ixx="0.025705" iyy="0.014127" izz="0.014127" ixy="-0.0" iyz="0.0" ixz="0.0"/>
-  </inertial>
-  <visual>
-    <origin xyz="-0.15 0.16 -0.05" rpy="0 0 0"/>
-    <geometry>
-      <mesh filename="package://synkar_robot_description/meshes/roda_v2__3__1.stl" scale="0.001 0.001 0.001"/>
-    </geometry>
-    <material name="silver"/>
-  </visual>
-  <collision>
-    <origin xyz="-0.15 0.16 -0.05" rpy="0 0 0"/>
-    <geometry>
-      <mesh filename="package://synkar_robot_description/meshes/roda_v2__3__1.stl" scale="0.001 0.001 0.001"/>
     </geometry>
   </collision>
 </link>
 
 <link name="roda_v1__1__1">
   <inertial>
-    <origin xyz="0.022499999999998438 1.1102230246251565e-16 0.0" rpy="0 0 0"/>
+    <origin xyz="-3.5121335326127046e-07 -0.022499648786645093 0.0" rpy="0 0 0"/>
     <mass value="7.553355760718545"/>
-    <inertia ixx="0.025705" iyy="0.014127" izz="0.014127" ixy="0.0" iyz="0.0" ixz="0.0"/>
+    <inertia ixx="0.014127" iyy="0.025705" izz="0.014127" ixy="0.0" iyz="0.0" ixz="0.0"/>
   </inertial>
   <visual>
-    <origin xyz="-0.15 -0.19 -0.05" rpy="0 0 0"/>
+    <origin xyz="0.160025 0.149975 -0.05" rpy="0 0 0"/>
     <geometry>
-      <mesh filename="package://synkar_robot_description/meshes/roda_v2_1.stl" scale="0.001 0.001 0.001"/>
+      <mesh filename="package://synkar_robot_description/meshes/roda_v1__1__1.stl" scale="0.001 0.001 0.001"/>
     </geometry>
     <material name="silver"/>
   </visual>
   <collision>
-    <origin xyz="-0.15 -0.19 -0.05" rpy="0 0 0"/>
+    <origin xyz="0.160025 0.149975 -0.05" rpy="0 0 0"/>
     <geometry>
-      <mesh filename="package://synkar_robot_description/meshes/roda_v2_1.stl" scale="0.001 0.001 0.001"/>
+      <mesh filename="package://synkar_robot_description/meshes/roda_v1__1__1.stl" scale="0.001 0.001 0.001"/>
+    </geometry>
+  </collision>
+</link>
+
+<link name="roda_v1_1">
+  <inertial>
+    <origin xyz="-3.5121335281718125e-07 -0.02249964878664526 0.0" rpy="0 0 0"/>
+    <mass value="7.553355760718545"/>
+    <inertia ixx="0.014127" iyy="0.025705" izz="0.014127" ixy="0.0" iyz="0.0" ixz="0.0"/>
+  </inertial>
+  <visual>
+    <origin xyz="-0.189975 0.149975 -0.05" rpy="0 0 0"/>
+    <geometry>
+      <mesh filename="package://synkar_robot_description/meshes/roda_v1_1.stl" scale="0.001 0.001 0.001"/>
+    </geometry>
+    <material name="silver"/>
+  </visual>
+  <collision>
+    <origin xyz="-0.189975 0.149975 -0.05" rpy="0 0 0"/>
+    <geometry>
+      <mesh filename="package://synkar_robot_description/meshes/roda_v1_1.stl" scale="0.001 0.001 0.001"/>
     </geometry>
   </collision>
 </link>
 
 <link name="roda_v1__2__1">
   <inertial>
-    <origin xyz="-0.022499999999998438 1.1102230246251565e-16 0.0" rpy="0 0 0"/>
+    <origin xyz="-3.5121335281718125e-07 0.02250035121335192 0.0" rpy="0 0 0"/>
     <mass value="7.553355760718545"/>
-    <inertia ixx="0.025705" iyy="0.014127" izz="0.014127" ixy="0.0" iyz="0.0" ixz="0.0"/>
+    <inertia ixx="0.014127" iyy="0.025705" izz="0.014127" ixy="-0.0" iyz="-0.0" ixz="0.0"/>
   </inertial>
   <visual>
-    <origin xyz="0.15 -0.19 -0.05" rpy="0 0 0"/>
+    <origin xyz="-0.189975 -0.150025 -0.05" rpy="0 0 0"/>
     <geometry>
-      <mesh filename="package://synkar_robot_description/meshes/roda_v2__2__1.stl" scale="0.001 0.001 0.001"/>
+      <mesh filename="package://synkar_robot_description/meshes/roda_v1__2__1.stl" scale="0.001 0.001 0.001"/>
     </geometry>
     <material name="silver"/>
   </visual>
   <collision>
-    <origin xyz="0.15 -0.19 -0.05" rpy="0 0 0"/>
+    <origin xyz="-0.189975 -0.150025 -0.05" rpy="0 0 0"/>
     <geometry>
-      <mesh filename="package://synkar_robot_description/meshes/roda_v2__2__1.stl" scale="0.001 0.001 0.001"/>
+      <mesh filename="package://synkar_robot_description/meshes/roda_v1__2__1.stl" scale="0.001 0.001 0.001"/>
     </geometry>
   </collision>
 </link>
 
 <link name="roda_v1__3__1">
   <inertial>
-    <origin xyz="-0.0224999999999983 5.551115123125783e-17 0.0" rpy="0 0 0"/>
+    <origin xyz="-3.512133532335149e-07 0.022500351213351838 0.0" rpy="0 0 0"/>
     <mass value="7.553355760718545"/>
-    <inertia ixx="0.025705" iyy="0.014127" izz="0.014127" ixy="0.0" iyz="-0.0" ixz="0.0"/>
+    <inertia ixx="0.014127" iyy="0.025705" izz="0.014127" ixy="0.0" iyz="0.0" ixz="-0.0"/>
   </inertial>
   <visual>
-    <origin xyz="0.15 0.16 -0.05" rpy="0 0 0"/>
+    <origin xyz="0.160025 -0.150025 -0.05" rpy="0 0 0"/>
     <geometry>
-      <mesh filename="package://synkar_robot_description/meshes/roda_v2__1__1.stl" scale="0.001 0.001 0.001"/>
+      <mesh filename="package://synkar_robot_description/meshes/roda_v1__3__1.stl" scale="0.001 0.001 0.001"/>
     </geometry>
     <material name="silver"/>
   </visual>
   <collision>
-    <origin xyz="0.15 0.16 -0.05" rpy="0 0 0"/>
+    <origin xyz="0.160025 -0.150025 -0.05" rpy="0 0 0"/>
     <geometry>
-      <mesh filename="package://synkar_robot_description/meshes/roda_v2__1__1.stl" scale="0.001 0.001 0.001"/>
+      <mesh filename="package://synkar_robot_description/meshes/roda_v1__3__1.stl" scale="0.001 0.001 0.001"/>
     </geometry>
   </collision>
 </link>
 
 <joint name="Revolucionar_1" type="continuous">
-  <origin xyz="0.15 -0.16 0.05" rpy="0 0 0"/>
+  <origin xyz="-0.160025 -0.149975 0.05" rpy="0 0 0"/>
   <parent link="base_link"/>
-  <child link="roda_v1_1"/>
-  <axis xyz="-1.0 0.0 0.0"/>
+  <child link="roda_v1__1__1"/>
+  <axis xyz="0.0 1.0 0.0"/>
 </joint>
 
 <joint name="Revolucionar_2" type="continuous">
-  <origin xyz="0.15 0.19 0.05" rpy="0 0 0"/>
+  <origin xyz="0.189975 -0.149975 0.05" rpy="0 0 0"/>
   <parent link="base_link"/>
-  <child link="roda_v1__1__1"/>
-  <axis xyz="-1.0 0.0 0.0"/>
+  <child link="roda_v1_1"/>
+  <axis xyz="0.0 1.0 0.0"/>
 </joint>
 
 <joint name="Revolucionar_3" type="continuous">
-  <origin xyz="-0.15 0.19 0.05" rpy="0 0 0"/>
+  <origin xyz="0.189975 0.150025 0.05" rpy="0 0 0"/>
   <parent link="base_link"/>
   <child link="roda_v1__2__1"/>
-  <axis xyz="-1.0 0.0 0.0"/>
+  <axis xyz="-0.0 1.0 0.0"/>
 </joint>
 
 <joint name="Revolucionar_4" type="continuous">
-  <origin xyz="-0.15 -0.16 0.05" rpy="0 0 0"/>
+  <origin xyz="-0.160025 0.150025 0.05" rpy="0 0 0"/>
   <parent link="base_link"/>
   <child link="roda_v1__3__1"/>
-  <axis xyz="-1.0 0.0 0.0"/>
+  <axis xyz="-0.0 1.0 0.0"/>
 </joint>
-
 
   <!-- ========== T265 (mono) ========== -->
   <link name="camera_t265_link"/>
   <joint name="camera_t265_joint" type="fixed">
     <parent link="base_link"/>
     <child  link="camera_t265_link"/>
-    <!-- x=0.290, y=0.2425, z=ajuste -->
-    <origin xyz="0.290 0.2425 0.20" rpy="0 0 0"/>
+    <origin xyz="0.290 0 0.2425" rpy="0 0 0"/>
   </joint>
 
   <gazebo reference="camera_t265_link">
@@ -170,8 +168,7 @@
   <joint name="camera_d435i_joint" type="fixed">
     <parent link="base_link"/>
     <child  link="camera_d435i_link"/>
-    <!-- x=0.290, y=0.2725, z=ajuste -->
-    <origin xyz="0.290 0.2725 0.20" rpy="0 0 0"/>
+    <origin xyz="0.290 0 0.2725" rpy="0 0 0"/>
   </joint>
 
   <!-- RGB -->

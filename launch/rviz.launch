@@ -1,0 +1,21 @@
+<launch>
+  <!-- Ajusta variáveis de ambiente para compatibilidade (se necessário) -->
+  <env name="LIBGL_ALWAYS_SOFTWARE" value="1"/>
+  <env name="LIBGL_ALWAYS_INDIRECT" value="0"/>
+
+  <!-- Parâmetros de entrada -->
+  <arg name="model" default="$(find synkar_robot_description)/urdf/synkar_robot.xacro" doc="Arquivo XACRO/URDF do robô"/>
+  <arg name="gui" default="true" doc="Habilita Joint State Publisher GUI"/>
+  <arg name="rvizconfig" default="$(find synkar_robot_description)/launch/urdf.rviz" doc="Arquivo de configuração do RViz"/>
+
+  <!-- Carrega descrição do robô -->
+  <param name="robot_description" command="$(find xacro)/xacro $(arg model)" />
+
+  <!-- Publicadores de estado de juntas e TF -->
+  <param name="use_gui" value="$(arg gui)" />
+  <node name="joint_state_publisher_gui" pkg="joint_state_publisher_gui" type="joint_state_publisher_gui" output="screen"/>
+  <node name="robot_state_publisher" pkg="robot_state_publisher" type="robot_state_publisher" output="screen"/>
+
+  <!-- Inicia o RViz com a configuração especificada -->
+  <node name="rviz" pkg="rviz" type="rviz" args="-d $(arg rvizconfig)" required="true" output="screen"/>
+</launch>
